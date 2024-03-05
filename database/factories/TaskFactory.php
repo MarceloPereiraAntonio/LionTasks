@@ -15,15 +15,15 @@ class TaskFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition() : array
     {
         return [
-            'title'         => fake()->text(10),
-            'description'   => fake()->paragraph(2),
-            'category_id'   => Category::inRandomOrder()->first()->id,
-            'completed'     => fake()->randomElement([0, 1]),
-            'created_at'    => now(),
-            'updated_at'    => now(),
+            'title'       => fake()->text(10),
+            'description' => fake()->paragraph(2),
+            'category_id' => Category::inRandomOrder()->first()->id,
+            'completed'   => fake()->randomElement([0, 1]),
+            'created_at'  => now(),
+            'updated_at'  => now(),
         ];
     }
 }

@@ -15,4 +15,4 @@ Route::middleware('auth')->group(function () {
     })->middleware(['auth', 'verified'])->name('dashboard');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
