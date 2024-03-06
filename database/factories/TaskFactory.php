@@ -20,7 +20,7 @@ class TaskFactory extends Factory
         return [
             'title'       => fake()->text(10),
             'description' => fake()->paragraph(2),
-            'category_id' => Category::inRandomOrder()->first()->id,
+            'category_id' => Category::inRandomOrder()->first()->id ?? null,
             'completed'   => fake()->randomElement([0, 1]),
             'created_at'  => now(),
             'updated_at'  => now(),
